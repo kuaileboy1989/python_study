@@ -1,0 +1,25 @@
+<Request lang="zh-CN" service="OrderService">
+	<Body>
+		<Order d_address="北京" d_city="北京" d_company="shopex" d_contact="s_收件" d_province="北京" d_tel="17011112222" express_type="1" j_address="上海市徐汇区" j_city="上海" j_company="商派" j_contact="我打" j_province="上海" j_tel="15011112222" orderid="TB1207300000002" parcel_quantity="1" pay_method="1">
+			<OrderOption carge="手机,IPAD,充电器" carge_total_weight="5.5" cargo_amount="1000,2000,3000" cargo_count="1,1,2" cargo_unit="台,台,个" cargo_weight="1.5,1.0,3.0" custid="5322152645" remark="无备注" sendstarttime="2014-06-10 11:46:00"/>
+		</Order>
+	</Body>
+	<Head>5710919526,RU3s0;Km]~jtEd36D6Qq</Head>
+</Request>
+
+***response: 
+
+<?xml version='1.0' encoding='UTF-8'?>
+
+<Response service="OrderService">
+    <Head>OK</Head>
+    <Body>
+        <OrderResponse 
+            filter_result="2" 
+            destcode="010" 
+            mailno="388400664177" 
+            origincode="021" 
+            orderid="TB1207300000002"
+        />
+    </Body>
+</Response>

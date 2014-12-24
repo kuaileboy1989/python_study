@@ -1,0 +1,4 @@
+
+
+1.本目录测试Python内建函数setattr()
+2.测试不固定参数*tuple_args, **dict_args

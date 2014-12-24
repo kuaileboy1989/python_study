@@ -1,0 +1,50 @@
+{
+    'to_node_id': '1634343031', 
+    'rights_level': 'custom', 
+    'refresh_time': '2014-07-31 15:02:18', 
+    'erp_node': '1634343031', 
+    'timestamp': 1406793094.993425, 
+    'msg_id': '53D9F586C0A833393EE6A37FEC0CDF29', 
+    'pity_node': '1738363832', 
+    'to_type': 'ecos.ome', 
+    'node_type': 'ecos.ome', 
+    'node_id': '1634343031', 
+    'to_token': '2c02df98ac3ef7bc978590e6e2bd3d79c9024b07e341a361268d32c6eafe97ea', 
+    'from_node_id': '1738363832', 
+    'xml_content': {
+        'wmsPurchaseOrderPushInfo': {
+            'header': {
+                'erp_order_num': u'\u91c7\u8d2d\u8ba2\u5355\u53f7\u7801', 
+                'receipt_id': u'\u5165\u5e93\u5355\u53f7', 
+                'close_date': u'\u5173\u5355\u65f6\u95f4'
+            }, 
+            'detailList': {
+                'item': {
+                    'vendor': u'\u9001\u8d27\u5546', 
+                    'erp_order_line_num': u'\u884c\u53f7', 
+                    'lot': u'\u6279\u53f7', 
+                    'inventory_sts': u'\u5e93\u5b58\u72b6\u6001', 
+                    'expiration_date': u'\u6709\u6548\u671f', 
+                    'id': u'\u8bb0\u5f55\u53f7', 
+                    'serialNumberList': {
+                        'serial_number': u'\u4e32\u53f7'
+                    }, 
+                    'sku_no': u'\u5546\u54c1\u7f16\u53f7', 
+                    'qty': u'\u5b9e\u6536\u6570\u91cf'
+                }
+            }
+        }
+    }, 
+    'from_token': '6677ef590d315c4aa7959c392c2b5977f6370920a950a9ffedc2fc97da6997b5', 
+    'api_url': 'http://biz.ex-sandbox.com/downline/ocs_125/index.php/api', 
+    'channel_ver': '2.1', 
+    'from_type': 'sf_wms', 
+    'warehouse_node_map': {
+        '755DCA': '1738363832'
+    }, 
+    'sf_wms_node': '1738363832', 
+    '01f18980363f40e48416464baf4cc7c0': u'<wmsPurchaseOrderPushInfo>\n<header>\n<erp_order_num>\u91c7\u8d2d\u8ba2\u5355\u53f7\u7801</erp_order_num>\n<receipt_id>\u5165\u5e93\u5355\u53f7</receipt_id>\n<close_date>\u5173\u5355\u65f6\u95f4</close_date>\n</header>\n<detailList>\n<item>\n<id>\u8bb0\u5f55\u53f7</id>\n<erp_order_line_num>\u884c\u53f7</erp_order_line_num>\n<sku_no>\u5546\u54c1\u7f16\u53f7</sku_no>\n<qty>\u5b9e\u6536\u6570\u91cf</qty>\n<lot>\u6279\u53f7</lot>\n<expiration_date>\u6709\u6548\u671f</expiration_date>\n<inventory_sts>\u5e93\u5b58\u72b6\u6001</inventory_sts>\n<vendor>\u9001\u8d27\u5546</vendor>\n<serialNumberList>\n<serial_number>\u4e32\u53f7</serial_number>\n</serialNumberList>\n</item>\n</detailList>\n</wmsPurchaseOrderPushInfo>', 
+    '_id': 'rel_1738363832_store.wms.inorder.notify_1634343031', 
+    'method': 'store.wms.inorder.notify', 
+    'channel': 'fast'
+}
