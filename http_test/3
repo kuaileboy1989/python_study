@@ -1,0 +1,14 @@
+------------------------------
+
+---: {'to_node_id': '1173743138', 'approve_status': 'instock', 'to_api_v': '1.0', 'sign': 'E9345C4B66D10406AE67C112859774E5', 'format': 'json', 'timestamp': '2014-10-28 17:07:16', 'msg_id': '544F1013C0A802155E1FA3B186E7E968', 'from_api_v': '2.2', 'app_id': 'ecos.ome', 'page_size': '40', 'method': 'store.items.all.get', 'node_type': 'taobao', 'certi_id': '1526766732', 'v': '1', 'date': '2014-10-28 11:40:03', 'callback_url': 'http://biz.ex-sandbox.com/callback.php', 'banner': 'sold_out', 'from_node_id': '1745854139', 'page_no': '104', 'fields': 'iid,outer_id,bn,num,title,default_img_url,modified,detail_url,approve_status,skus,price,barcode '}
+
+---: to_node_id=1173743138&approve_status=instock&to_api_v=1.0&sign=E9345C4B66D10406AE67C112859774E5&format=json&timestamp=2014-10-28+17%3A07%3A16&msg_id=544F1013C0A802155E1FA3B186E7E968&from_api_v=2.2&app_id=ecos.ome&page_size=40&method=store.items.all.get&node_type=taobao&certi_id=1526766732&v=1&date=2014-10-28+11%3A40%3A03&callback_url=http%3A%2F%2Fbiz.ex-sandbox.com%2Fcallback.php&banner=sold_out&from_node_id=1745854139&page_no=104&fields=iid%2Couter_id%2Cbn%2Cnum%2Ctitle%2Cdefault_img_url%2Cmodified%2Cdetail_url%2Capprove_status%2Cskus%2Cprice%2Cbarcode+
+
+---: 200
+
+---: OK
+
+---: {"res": "W90019", "msg_id": "544F5CC4C0A8021673C06E2A8663D96C", "err_msg": "Invalid arguments:page_no", "data": "\"\"", "rsp": "fail"}
+
+---: [('date', 'Tue, 28 Oct 2014 09:07:16 GMT'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('content-type', 'text/html; charset=ISO-8859-1'), ('server', 'nginx/1.0.5')]
+------------------------------

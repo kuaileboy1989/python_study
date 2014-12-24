@@ -1,0 +1,18 @@
+{
+    'warehouseCode': u'755DCA', 
+    'sf_wms_node': u'1738363832', 
+    'data_digest': u'GFR7q6BiUUe0OMeHKpcOog==', 
+    'erp_node': u'1833323732', 
+    'logistics_interface': 
+u'<wmsSailOrderPushInfo>\n  
+    <header>\n    
+        <company>SHP</company>\n    
+        <warehouse>755DCA</warehouse>\n    
+        <erp_order>H201408011117004437</erp_order>\n    
+        <carrier>\u987a\u4e30\u901f\u8fd0</carrier>\n    
+        <status_time>2014-08-01 11:14:15</status_time>\n    
+        <status_code>10001</status_code>\n    
+        <status_remark>\u60a8\u7684\u8ba2\u5355\u5df2\u63a5\u6536</status_remark>\n  
+    </header>\n
+</wmsSailOrderPushInfo>'
+}
