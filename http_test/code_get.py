@@ -9,12 +9,14 @@ def main():
     httpClient = None
     try:
         url_dic = {
-                'client_id':'1010011902',
+                'client_id':'1430279216667',
                 'response_type':'code',
-                'redirect_uri':'http://biz.ex-sandbox.com/callback.php'
+                'state':'i am state',
+                'redirect_uri':'http://ligj.ersoft.cn:48169/oauth/bong/redirect'
                 }
         url_en = urllib.urlencode(url_dic)
         url = 'https://oauth.tbsandbox.com/authorize?'+url_en
+        url = 'http://open-test.bong.cn/oauth/authorize?'+url_en
         print
         print url
         print
