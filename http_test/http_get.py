@@ -6,15 +6,16 @@ import httplib
 httpClient = None
  
 try:
-    httpClient = httplib.HTTPConnection('localhost', 18672, timeout=30)
-    httpClient.request('GET', '/')
+    while True:
+        httpClient = httplib.HTTPConnection('www.beigen.com', timeout=30)
+        httpClient.request('GET', '/')
 
-    #response是HTTPResponse对象
-    response = httpClient.getresponse()
-    #print response
-    print response.status
-    print response.reason
-    print response.read()
+        #response是HTTPResponse对象
+        response = httpClient.getresponse()
+        #print response
+        print response.status
+        #print response.reason
+        #print response.read()
 except Exception, e:
     print e
 finally:

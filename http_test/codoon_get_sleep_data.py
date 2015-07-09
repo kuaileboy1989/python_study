@@ -8,14 +8,14 @@ import urllib
 import hashlib
 import time
 import copy
+import simplejson
+import contextlib
 
 from utils import *
 
         
 TOKEN_GET_STRUCT = {
-                'yyyymmdd':'20150628',
-                'uid':'33623950369539523785',
-                'access_token':'b9a82f9a-d6a6-4339-867d-e1b4e243275e'
+                'the_day':'2015-06-05',
                 }
 
 
@@ -25,15 +25,20 @@ def main():
     try:
         params = copy.deepcopy(TOKEN_GET_STRUCT)
         #        params = urllib.urlencode({'from_node_id': '1','to_node_id': '2','sign':'aaaaaaaa','method':'abc'})
+        #print '\n---:',params
+        #params = urllib.urlencode(params)
+        params = simplejson.dumps(params)
         print '\n---:',params
-        params = urllib.urlencode(params)
-        print '\n---:',params
-        #url = 'http://open-test.bong.cn/1/sleep/blocks/20150504/3?uid=85977285743145918548&access_token=a820493f-7932-4c6a-930a-8e2af536307c'
-        url = 'http://open.bong.cn/1/sleep/blocks/20150628/3?uid=33623950369539523785&access_token=b9a82f9a-d6a6-4339-867d-e1b4e243275e'
+        url = 'http://api.codoon.com/api/get_sleep_data'
+        headers = {"Authorization": "Bearer 7f4864f576f81a7e5455134cb05d6795"}
 #        print response.read()
-        resp = urllib2.urlopen(url)
+        req = urllib2.Request(url, params, headers)
+        with contextlib.closing(urllib2.urlopen(req)) as res:
+            resp = res.read()
+        #resp = urllib2.urlopen(url)
         print '\n---response:'
-        print resp.read()
+        print resp
+        print type(resp)
     except Exception, e:
         print e
     finally:
