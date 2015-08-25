@@ -28,8 +28,8 @@ def main():
         print '\n---:',params
         params = urllib.urlencode(params)
         print '\n---:',params
-        url = 'http://open-test.bong.cn/1/bongday/dailysum/20150501/5?uid=85977285743145918548&access_token=a820493f-7932-4c6a-930a-8e2af536307c'
-#        print response.read()
+        url = 'https://open.bong.cn/1/bongday/dailysum/20150707/5?uid=75083729626944169492&access_token=a00ceb54-fed3-4eaf-8167-3ba85c1e8fb5'
+        print '---url:',url
         resp = urllib2.urlopen(url)
         print '\n---response:'
         print resp.read()

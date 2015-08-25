@@ -8,14 +8,16 @@ import urllib
 import hashlib
 import time
 import copy
-import simplejson
-import contextlib
 
 from utils import *
 
         
 TOKEN_GET_STRUCT = {
-                'the_day':'2015-07-08',
+                'client_id':'2ed2291409cc11e5a58900163e000233',
+                'client_secret':'2ed22b9409cc11e5a58900163e000233',
+                'grant_type':'refresh_token',
+                'refresh_token':'40024dca708dc65d95756fc221f750c4',
+                'scope': 'user,sports'
                 }
 
 
@@ -25,20 +27,13 @@ def main():
     try:
         params = copy.deepcopy(TOKEN_GET_STRUCT)
         #        params = urllib.urlencode({'from_node_id': '1','to_node_id': '2','sign':'aaaaaaaa','method':'abc'})
-        #print '\n---:',params
-        #params = urllib.urlencode(params)
-        params = simplejson.dumps(params)
         print '\n---:',params
-        url = 'http://api.codoon.com/api/get_sleep_data'
-        headers = {"Authorization": "Bearer 85498aad9de119055d5f5d6b812da21b"}
+        params = urllib.urlencode(params)
+        print '\n---:',params
+        url = 'http://api.codoon.com/token'
 #        print response.read()
-        req = urllib2.Request(url, params, headers)
-        with contextlib.closing(urllib2.urlopen(req)) as res:
-            resp = res.read()
-        #resp = urllib2.urlopen(url)
-        print '\n---response:'
-        print resp
-        print type(resp)
+        resp = urllib2.urlopen(url, params)
+        print resp.read()
     except Exception, e:
         print e
     finally:

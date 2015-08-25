@@ -15,24 +15,29 @@ from utils import *
 
         
 TOKEN_GET_STRUCT = {
-                'the_day':'2015-07-08',
+                #'date': time.time(),
+                #'page_token': 1,
+                #'start_time': time.time(),
+                #'end_time': time.time(),
+                #'updated_after': time.time(),
                 }
-
 
 def main():
     httpClient = None
     #token = TOKEN
     try:
-        params = copy.deepcopy(TOKEN_GET_STRUCT)
+        #params = copy.deepcopy(TOKEN_GET_STRUCT)
         #        params = urllib.urlencode({'from_node_id': '1','to_node_id': '2','sign':'aaaaaaaa','method':'abc'})
         #print '\n---:',params
         #params = urllib.urlencode(params)
-        params = simplejson.dumps(params)
-        print '\n---:',params
-        url = 'http://api.codoon.com/api/get_sleep_data'
-        headers = {"Authorization": "Bearer 85498aad9de119055d5f5d6b812da21b"}
+        #params = simplejson.dumps(params)
+        #print '\n---:',params
+        url = 'https://jawbone.com/nudge/api/v.1.1/users/@me'
+        print '\n----url:', url
+        headers = {"Accept": "application/json",
+                   "Authorization": "Bearer DudD7GQwFnf2uxTX_5b5vb4dpkSA0mjuPZJXREh5iPkA_6kc79HQJCOqZFfWkiyWcqtj6bMtuuJMWLqfgbkSwFECdgRlo_GULMgGZS0EumxrKbZFiOmnmAPChBPDZ5JP"}
 #        print response.read()
-        req = urllib2.Request(url, params, headers)
+        req = urllib2.Request(url, headers=headers)
         with contextlib.closing(urllib2.urlopen(req)) as res:
             resp = res.read()
         #resp = urllib2.urlopen(url)

@@ -8,14 +8,19 @@ import urllib
 import hashlib
 import time
 import copy
-import simplejson
-import contextlib
 
 from utils import *
 
         
 TOKEN_GET_STRUCT = {
-                'the_day':'2015-07-08',
+                'appid': '2882303761517363095',
+                'third_appid': '1437543634',
+                'third_appsecret': 'ODY0YzRiY2Q4NmVjNGMwODBiMDAxNDAxNGJlZTVlYTQ',
+                'mac_key': 'CNRWprK2KCb2xAKvYqYLyw5H-Ps',
+                'call_id': time.time(),
+                'access_token': 'V2_FzC_kDHUpx-UlvJgGF95YjQGg3NHDN7TEEph3U3semIfoN1c7V3H7g2MK1ljnaYnzp5BKpd-7g7nl4b-IT9dnftBY_9E8xsaZdrjYKOhJ8lJr_qklgbQkOlzLQQE8BIq',
+                'v': '1.0',
+                'l': 'english'
                 }
 
 
@@ -25,20 +30,14 @@ def main():
     try:
         params = copy.deepcopy(TOKEN_GET_STRUCT)
         #        params = urllib.urlencode({'from_node_id': '1','to_node_id': '2','sign':'aaaaaaaa','method':'abc'})
-        #print '\n---:',params
-        #params = urllib.urlencode(params)
-        params = simplejson.dumps(params)
         print '\n---:',params
-        url = 'http://api.codoon.com/api/get_sleep_data'
-        headers = {"Authorization": "Bearer 85498aad9de119055d5f5d6b812da21b"}
+        params = urllib.urlencode(params)
+        print '\n---:',params
+        url = 'https://hmservice.mi-ae.com.cn/user/info/getData'
 #        print response.read()
-        req = urllib2.Request(url, params, headers)
-        with contextlib.closing(urllib2.urlopen(req)) as res:
-            resp = res.read()
-        #resp = urllib2.urlopen(url)
+        resp = urllib2.urlopen(url+'?'+params)
         print '\n---response:'
-        print resp
-        print type(resp)
+        print resp.read()
     except Exception, e:
         print e
     finally:

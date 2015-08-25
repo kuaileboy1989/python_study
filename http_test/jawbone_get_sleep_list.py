@@ -15,9 +15,12 @@ from utils import *
 
         
 TOKEN_GET_STRUCT = {
-                'the_day':'2015-07-08',
+                'date': 2015080,
+                #'page_token': 1,
+                #'start_time': time.time(),
+                #'end_time': time.time(),
+                #'updated_after': time.time(),
                 }
-
 
 def main():
     httpClient = None
@@ -27,18 +30,19 @@ def main():
         #        params = urllib.urlencode({'from_node_id': '1','to_node_id': '2','sign':'aaaaaaaa','method':'abc'})
         #print '\n---:',params
         #params = urllib.urlencode(params)
-        params = simplejson.dumps(params)
+        params = urllib.urlencode(params)
         print '\n---:',params
-        url = 'http://api.codoon.com/api/get_sleep_data'
-        headers = {"Authorization": "Bearer 85498aad9de119055d5f5d6b812da21b"}
+        url = 'https://jawbone.com/nudge/api/v.1.1/users/@me/sleeps?'+params
+        print '\n---url:',url
+        headers = {"Accept": "application/json",
+                   "Authorization": "Bearer DudD7GQwFnetHzmJUn7sQr4dpkSA0mjuPZJXREh5iPn4sU6Bv0mibrbtTrHwVJOTcqtj6bMtuuJMWLqfgbkSwFECdgRlo_GULMgGZS0EumxrKbZFiOmnmAPChBPDZ5JP"}
 #        print response.read()
-        req = urllib2.Request(url, params, headers)
+        req = urllib2.Request(url, headers=headers)
         with contextlib.closing(urllib2.urlopen(req)) as res:
             resp = res.read()
         #resp = urllib2.urlopen(url)
         print '\n---response:'
         print resp
-        print type(resp)
     except Exception, e:
         print e
     finally:
